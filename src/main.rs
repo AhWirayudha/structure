@@ -6,6 +6,10 @@ struct User {
     sign_in_count: u64,
 }
 
+// tuple struct
+struct Color(i32, i32, i32); // if you want to name the tuple and use it
+struct Point(i32, i32, i32);
+
 fn main() {
     let user1 = User {
         active: true,
@@ -51,6 +55,13 @@ fn main() {
         ..user3 // update syntax
     };
     println!("{}", user6.username);
+
+    // tuple struct
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
+    let yellow = Color(0, 255, 0);
+    let red = Color(255, 0, 0);
+    println!("{}", black.0);
 }
 
 // function
