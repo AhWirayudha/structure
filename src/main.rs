@@ -10,6 +10,9 @@ struct User {
 struct Color(i32, i32, i32); // if you want to name the tuple and use it
 struct Point(i32, i32, i32);
 
+// unit like struct
+struct AlwaysEqual;
+
 fn main() {
     let user1 = User {
         active: true,
@@ -59,9 +62,13 @@ fn main() {
     // tuple struct
     let black = Color(0, 0, 0);
     let origin = Point(0, 0, 0);
-    let yellow = Color(0, 255, 0);
-    let red = Color(255, 0, 0);
-    println!("{}", black.0);
+    let _yellow = Color(0, 255, 0);
+    let _red = Color(255, 0, 0);
+    println!("{} {} {}", black.0, black.1, black.2);
+    println!("{} {} {}", origin.0, origin.1, origin.2);
+
+    // unit like struct
+    let _subject = AlwaysEqual;
 }
 
 // function
