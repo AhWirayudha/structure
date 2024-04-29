@@ -1,3 +1,4 @@
 ```
-	Rust Struct
+ Rust Struct
+  - defining and instantiating struct
 ```
